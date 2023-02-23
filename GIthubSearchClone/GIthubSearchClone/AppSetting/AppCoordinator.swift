@@ -27,7 +27,7 @@ class AppCoordinator: Coordinator {
     }
     
     private func showMainViewController() {
-        let viewController = MainViewController()
+        let viewController = SearchMainViewController()
         viewController.view.backgroundColor = .black
         navigationController.viewControllers = [viewController]
     }
