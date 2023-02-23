@@ -6,31 +6,33 @@
 //
 
 import XCTest
+import RxBlocking
 @testable import GIthubSearchClone
 
 final class GIthubSearchCloneTests: XCTestCase {
-
+    var searchService: SearchService!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        searchService = SearchService()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        searchService = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testFetch() throws {
+        let params = SearchParameters(
+            term: "swift",
+            sort: .default,
+            order: .asc,
+            limit: 30,
+            page: 1
+        )
+        let dto = try searchService.fetch(params: params)
+            .asObservable()
+            .toBlocking(timeout: 10)
+            .first()
+        
+        XCTAssertNotNil(dto)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
