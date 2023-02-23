@@ -137,6 +137,15 @@
 			path = GIthubSearchCloneUITests;
 			sourceTree = "<group>";
 		};
+		66114A1129A74BA300BA0915 /* AppSetting */ = {
+			isa = PBXGroup;
+			children = (
+				661149E029A745F600BA0915 /* AppDelegate.swift */,
+				661149E229A745F600BA0915 /* SceneDelegate.swift */,
+			);
+			path = AppSetting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
