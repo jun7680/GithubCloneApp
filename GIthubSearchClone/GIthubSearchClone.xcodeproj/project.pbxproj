@@ -35,6 +35,7 @@
 		66114A4729A7641F00BA0915 /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A4629A7641F00BA0915 /* SearchListTableViewCell.swift */; };
 		66114A4A29A795F500BA0915 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A4929A795F500BA0915 /* BaseTableViewCell.swift */; };
 		66114A4D29A7971100BA0915 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A4C29A7971100BA0915 /* UIViewExtensions.swift */; };
+		66114A5229A79AB700BA0915 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5129A79AB700BA0915 /* IntExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		66114A4629A7641F00BA0915 /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
 		66114A4929A795F500BA0915 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		66114A4C29A7971100BA0915 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		66114A5129A79AB700BA0915 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				66114A4C29A7971100BA0915 /* UIViewExtensions.swift */,
+				66114A5129A79AB700BA0915 /* IntExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				66114A1E29A74F5C00BA0915 /* APIType.swift in Sources */,
 				66114A4429A763B000BA0915 /* SearchListViewController.swift in Sources */,
 				66114A2C29A7527E00BA0915 /* Localization.swift in Sources */,
+				66114A5229A79AB700BA0915 /* IntExtension.swift in Sources */,
 				66114A3A29A7575800BA0915 /* SearchResponse.swift in Sources */,
 				661149E529A745F600BA0915 /* MainViewController.swift in Sources */,
 				661149E129A745F600BA0915 /* AppDelegate.swift in Sources */,
