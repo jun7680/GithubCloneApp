@@ -18,10 +18,15 @@ struct SearchResponse: Codable {
 }
 
 struct SearchDTO: Codable {
+    /// Title
     let name: String
+    /// Owner info
     let owner: OwnerDTO
+    /// Description
     let description: String
+    /// Star Count
     let starCount: Int
+    /// Language
     let language: String
     
     enum CodingKeys: String, CodingKey {
@@ -31,7 +36,9 @@ struct SearchDTO: Codable {
 }
 
 struct OwnerDTO: Codable {
+    /// owner name
     let login: String
+    /// owner image
     let avatarURL: String
     
     enum CodingKeys: String, CodingKey {
