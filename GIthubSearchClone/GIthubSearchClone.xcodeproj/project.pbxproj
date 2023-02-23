@@ -17,6 +17,7 @@
 		66114A0229A745F800BA0915 /* GIthubSearchCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A0129A745F800BA0915 /* GIthubSearchCloneUITests.swift */; };
 		66114A0429A745F800BA0915 /* GIthubSearchCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A0329A745F800BA0915 /* GIthubSearchCloneUITestsLaunchTests.swift */; };
 		66114A1C29A74E6000BA0915 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 66114A1B29A74E6000BA0915 /* SnapKit */; };
+		66114A1E29A74F5C00BA0915 /* APIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A1D29A74F5C00BA0915 /* APIType.swift */; };
 		66114A3129A754AB00BA0915 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 66114A3029A754AB00BA0915 /* RxBlocking */; };
 		66114A3329A754AB00BA0915 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 66114A3229A754AB00BA0915 /* RxCocoa */; };
 		66114A3529A754AB00BA0915 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 66114A3429A754AB00BA0915 /* RxRelay */; };
@@ -54,6 +55,7 @@
 		661149FD29A745F800BA0915 /* GIthubSearchCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GIthubSearchCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66114A0129A745F800BA0915 /* GIthubSearchCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIthubSearchCloneUITests.swift; sourceTree = "<group>"; };
 		66114A0329A745F800BA0915 /* GIthubSearchCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIthubSearchCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		66114A1D29A74F5C00BA0915 /* APIType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +111,8 @@
 		661149DF29A745F600BA0915 /* GIthubSearchClone */ = {
 			isa = PBXGroup;
 			children = (
-				661149E029A745F600BA0915 /* AppDelegate.swift */,
-				661149E229A745F600BA0915 /* SceneDelegate.swift */,
+				66114A1129A74BA300BA0915 /* AppSetting */,
+				66114A1229A74DF400BA0915 /* Network */,
 				661149E429A745F600BA0915 /* ViewController.swift */,
 				661149E629A745F600BA0915 /* Main.storyboard */,
 				661149E929A745F700BA0915 /* Assets.xcassets */,
@@ -146,6 +148,7 @@
 			path = AppSetting;
 			sourceTree = "<group>";
 		};
+				66114A1D29A74F5C00BA0915 /* APIType.swift */,
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66114A1E29A74F5C00BA0915 /* APIType.swift in Sources */,
 				661149E529A745F600BA0915 /* ViewController.swift in Sources */,
 				661149E129A745F600BA0915 /* AppDelegate.swift in Sources */,
 				661149E329A745F600BA0915 /* SceneDelegate.swift in Sources */,
