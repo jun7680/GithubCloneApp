@@ -9,11 +9,11 @@ import Foundation
 import RxSwift
 
 protocol SearchServiceRequest {
-    func fetch(params: SearchParameters) -> Single<SearchResponse>
+    static func fetch(params: SearchParameters) -> Single<SearchResponse>
 }
 
 class SearchService: SearchServiceRequest {
-    func fetch(params: SearchParameters) -> Single<SearchResponse> {
+    static func fetch(params: SearchParameters) -> Single<SearchResponse> {
         let type = SearchAPI.fetch(params: params)
         return SessionManager.shared.request(type: type)
     }
