@@ -10,6 +10,11 @@ import Foundation
 struct SearchResponse: Codable {
     let totalCount: Int
     let items: [SearchDTO]
+    
+    enum CodingKeys: String, CodingKey {
+        case totalCount = "total_count"
+        case items
+    }
 }
 
 struct SearchDTO: Codable {
