@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum SortType: String {
+protocol OptionTypeProtocol {}
+
+enum SortType: String, CaseIterable, OptionTypeProtocol {
     case `default`
     case stars
     case forks

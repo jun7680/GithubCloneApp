@@ -10,29 +10,6 @@ import UIKit
 class SearchListTableViewCell: BaseTableViewCell {
     static let identifer = "SearchListTableViewCell"
     
-    private let containerStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        return stackView
-    }()
-    
-    private let topInfoStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 2
-        
-        return stackView
-    }()
-    
-    private let bottomInfoStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 2
-        
-        return stackView
-    }()
-    
-    
     private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
         
@@ -41,7 +18,7 @@ class SearchListTableViewCell: BaseTableViewCell {
     
     private let ownerLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 10)
+        label.font = .systemFont(ofSize: 12)
         label.textColor = .lightGray
         
         return label
@@ -49,7 +26,7 @@ class SearchListTableViewCell: BaseTableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 10, weight: .semibold)
+        label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .white
         
         return label
@@ -57,7 +34,7 @@ class SearchListTableViewCell: BaseTableViewCell {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .white
         label.numberOfLines = 0
         
@@ -67,13 +44,13 @@ class SearchListTableViewCell: BaseTableViewCell {
     private let starImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "star")
-        
+        imageView.tintColor = .lightGray
         return imageView
     }()
     
     private let starCountLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .lightGray
         
         return label
@@ -81,55 +58,81 @@ class SearchListTableViewCell: BaseTableViewCell {
     
     private let languageLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         label.textColor = .lightGray
         
         return label
     }()
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        avatarImageView.image = nil
+    }
+    
     override func setup() {
         super.setup()
+        backgroundColor = .backgroundColor
+        selectionStyle = .none
     }
     
     override func setupViews() {
         super.setupViews()
         
-        let containerChild = [
-            topInfoStackView,
+        let views = [
+            avatarImageView,
+            ownerLabel,
             titleLabel,
             descriptionLabel,
-            bottomInfoStackView
-        ]
-        
-        containerStackView.addArrangeSubViews(containerChild)
-        
-        let topInfoChild = [
-            avatarImageView,
-            ownerLabel
-        ]
-        
-        topInfoStackView.addArrangeSubViews(topInfoChild)
-        
-        let bottomInfoChild = [
             starImageView,
             starCountLabel,
             languageLabel
         ]
         
-        bottomInfoStackView.addArrangeSubViews(bottomInfoChild)
-        contentView.addSubview(containerStackView)
+        contentView.addSubViews(views)
         
     }
     
     override func initConstraints() {
         super.initConstraints()
         
-        containerStackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        avatarImageView.snp.makeConstraints { make in
+            make.top.leading.equalToSuperview().inset(14)
+            make.size.equalTo(14)
+        }
+        
+        ownerLabel.snp.makeConstraints { make in
+            make.leading.equalTo(avatarImageView.snp.trailing).offset(4)
+            make.top.equalTo(avatarImageView)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(avatarImageView.snp.bottom).offset(6)
+            make.leading.equalTo(avatarImageView)
+            make.trailing.equalToSuperview().inset(8)
+        }
+        
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.leading.equalTo(avatarImageView)
+            make.trailing.equalToSuperview().inset(8)
         }
         
         starImageView.snp.makeConstraints { make in
-            make.size.equalTo(12)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(4)
+            make.leading.equalTo(avatarImageView)
+            make.size.equalTo(14)
+            make.bottom.equalToSuperview().inset(14)
+        }
+        
+        starCountLabel.snp.makeConstraints { make in
+            make.leading.equalTo(starImageView.snp.trailing).offset(4)
+            make.centerY.equalTo(starImageView)
+        }
+        
+        languageLabel.snp.makeConstraints { make in
+            make.leading.equalTo(starCountLabel.snp.trailing).offset(4)
+            make.centerY.equalTo(starImageView)
         }
     }
     
@@ -139,6 +142,6 @@ class SearchListTableViewCell: BaseTableViewCell {
         descriptionLabel.text = model.description
         starCountLabel.text = model.starCount.toDecimal
         languageLabel.text = model.language
-        // TODO: - Image 처리 후 avatar 구현
+        avatarImageView.setImage(from: model.owner.avatarURL)
     }
 }

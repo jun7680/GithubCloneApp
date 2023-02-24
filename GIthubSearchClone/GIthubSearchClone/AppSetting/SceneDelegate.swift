@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let navigationController = UINavigationController()
+        setNavigationController(navigationController)
         window?.rootViewController = navigationController
-        
         let coordinator = AppCoordinator(navigationController: navigationController)
         coordinator.start()
         
@@ -59,3 +59,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+// MARK: private function NavigationController appearance
+extension SceneDelegate {
+    private func setNavigationController(_ nav: UINavigationController) {
+        nav.navigationBar.prefersLargeTitles = true
+        let titleAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .backgroundColor
+        appearance.titleTextAttributes = titleAttributes
+        appearance.largeTitleTextAttributes = titleAttributes
+        nav.navigationBar.standardAppearance = appearance
+    }
+}

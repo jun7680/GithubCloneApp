@@ -14,6 +14,9 @@ class BaseTableViewCell: UITableViewCell {
         reuseIdentifier: String?
     ) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setup()
+        setupViews()
+        initConstraints()
     }
     
     @available(*, unavailable)

@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIView {
-    
     /// Add Subview
     /// - Parameter views: [UIView]
     func addSubViews(_ views: [UIView]) {
@@ -20,7 +19,6 @@ extension UIView {
 }
 
 extension UIStackView {
-    
     /// ArrangeSubView for UIStackView
     /// - Parameter child: [UIView]
     func addArrangeSubViews(_ child: [UIView]) {

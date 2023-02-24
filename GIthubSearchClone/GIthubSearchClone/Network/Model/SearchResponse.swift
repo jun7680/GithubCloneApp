@@ -23,11 +23,11 @@ struct SearchDTO: Codable {
     /// Owner info
     let owner: OwnerDTO
     /// Description
-    let description: String
+    let description: String?
     /// Star Count
     let starCount: Int
     /// Language
-    let language: String
+    let language: String?
     
     enum CodingKeys: String, CodingKey {
         case name, owner, description, language

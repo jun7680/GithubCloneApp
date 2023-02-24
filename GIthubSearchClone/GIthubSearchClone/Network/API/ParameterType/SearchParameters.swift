@@ -11,11 +11,11 @@ struct SearchParameters {
     /// 검색어
     let term: String
     /// 필터
-    let sort: SortType
+    var sort: SortType
     /// 정렬
-    let order: OrderType
+    var order: OrderType
     /// item count
     let limit: Int
     /// 페이지 == offset
-    let page: Int
+    var page: Int
 }
