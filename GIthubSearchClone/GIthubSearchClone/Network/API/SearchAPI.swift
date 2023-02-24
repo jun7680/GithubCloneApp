@@ -31,6 +31,7 @@ extension SearchAPI: APIType {
             return [
                 Localize.APIKey.term: params.term,
                 Localize.APIKey.order: params.order,
+                Localize.APIKey.sort: params.sort,
                 Localize.APIKey.perPage: params.limit,
                 Localize.APIKey.page: params.page
             ]

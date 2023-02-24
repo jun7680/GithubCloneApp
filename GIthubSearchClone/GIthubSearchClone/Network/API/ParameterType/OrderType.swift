@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum OrderType: String {
+enum OrderType: String, CaseIterable, OptionTypeProtocol {
     case desc
     case asc
 }
