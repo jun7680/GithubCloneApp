@@ -41,6 +41,7 @@
 		66114A5929A7A15900BA0915 /* SearchMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5829A7A15900BA0915 /* SearchMainViewModel.swift */; };
 		66114A5E29A7AAC900BA0915 /* SearchMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5D29A7AAC900BA0915 /* SearchMainCoordinator.swift */; };
 		66114A6029A7B01B00BA0915 /* SearchListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5F29A7B01B00BA0915 /* SearchListCoordinator.swift */; };
+		66114A6B29A7D11C00BA0915 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		66114A5429A79D4400BA0915 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		66114A5629A7A00900BA0915 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		66114A5829A7A15900BA0915 /* SearchMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainViewModel.swift; sourceTree = "<group>"; };
+		66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		66114A6829A7D0F800BA0915 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				66114A6929A7D10C00BA0915 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,6 +483,7 @@
 				66114A3A29A7575800BA0915 /* SearchResponse.swift in Sources */,
 				66114A5929A7A15900BA0915 /* SearchMainViewModel.swift in Sources */,
 				661149E529A745F600BA0915 /* SearchMainViewController.swift in Sources */,
+				66114A6B29A7D11C00BA0915 /* LoadingIndicator.swift in Sources */,
 				661149E129A745F600BA0915 /* AppDelegate.swift in Sources */,
 				66114A3D29A759B100BA0915 /* SearchService.swift in Sources */,
 				66114A4D29A7971100BA0915 /* UIViewExtensions.swift in Sources */,
