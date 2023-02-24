@@ -48,6 +48,7 @@
 		66114A7429A8F81400BA0915 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7329A8F81400BA0915 /* UIColorExtension.swift */; };
 		66114A7929A8FA3400BA0915 /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7829A8FA3400BA0915 /* OptionViewModel.swift */; };
 		66114A7B29A8FD3800BA0915 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */; };
+		66114A7F29A8FFD400BA0915 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7E29A8FFD400BA0915 /* SearchListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,10 +104,12 @@
 		66114A6229A7BFD100BA0915 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		66114A6429A7C07F00BA0915 /* UIimageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageViewExtension.swift; sourceTree = "<group>"; };
 		66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		66114A6C29A7DB9500BA0915 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		66114A6F29A7E23300BA0915 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		66114A7329A8F81400BA0915 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		66114A7829A8FA3400BA0915 /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
 		66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		66114A7E29A8FFD400BA0915 /* SearchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,6 +535,8 @@
 				66114A4729A7641F00BA0915 /* SearchListTableViewCell.swift in Sources */,
 				66114A2529A750DA00BA0915 /* SortType.swift in Sources */,
 				66114A2929A7518200BA0915 /* SearchParameters.swift in Sources */,
+				66114A7F29A8FFD400BA0915 /* SearchListViewController.swift in Sources */,
+				66114A5E29A7AAC900BA0915 /* SearchMainCoordinator.swift in Sources */,
 				66114A6D29A7DB9500BA0915 /* UIViewControllerExtension.swift in Sources */,
 				66114A1E29A74F5C00BA0915 /* APIType.swift in Sources */,
 				66114A2C29A7527E00BA0915 /* Localization.swift in Sources */,

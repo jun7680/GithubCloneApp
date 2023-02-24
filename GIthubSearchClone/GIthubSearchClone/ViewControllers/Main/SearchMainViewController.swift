@@ -10,10 +10,16 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
+protocol SearchMainViewControllerDelegate: AnyObject {
+    func moveSearchList(with params: SearchParameters)
+}
+
 class SearchMainViewController: BaseViewController {
     
-    private let viewModel = SearchMainViewModel()
+    private let viewModel: SearchMainViewModel
     private let disposeBag = DisposeBag()
+    
+    weak var delegate: SearchMainViewControllerDelegate?
     
     private let searchController: UISearchController = {
         let controller = UISearchController()
@@ -21,9 +27,23 @@ class SearchMainViewController: BaseViewController {
         return controller
     }()
     
+    init(viewModel: SearchMainViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     override func setup() {
         super.setup()
-        title = "GitHub"
         navigationItem.searchController = searchController
     }
     
@@ -38,6 +58,12 @@ class SearchMainViewController: BaseViewController {
     
     override func bind() {
         super.bind()
+        
+        viewModel.outputs.searchParamsObservable
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(with: self) { owner, params in
+                owner.delegate?.moveSearchList(with: params)
+            }.disposed(by: disposeBag)
     }
     
     override func subscribeUI() {
@@ -59,11 +85,6 @@ class SearchMainViewController: BaseViewController {
 extension SearchMainViewController {
     
     private func setupNavigationItems() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        let titleAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
-        navigationController?.navigationBar.largeTitleTextAttributes = titleAttributes
         // SearchBar TextColor 변경
         searchController.searchBar.searchTextField.textColor = .white
     }

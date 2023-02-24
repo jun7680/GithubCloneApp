@@ -41,11 +41,6 @@ extension SearchMainCoordinator {
         )
         viewController.delegate = self
         viewController.title = "GitHub"
-//        navigationController.navigationBar.prefersLargeTitles = true
-//        let titleAttributes = [
-//            NSAttributedString.Key.foregroundColor: UIColor.white
-//        ]
-//        navigationController.navigationBar.largeTitleTextAttributes = titleAttributes
         navigationController.viewControllers = [viewController]
     }
 }
