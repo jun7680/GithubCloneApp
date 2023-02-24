@@ -44,7 +44,10 @@
 		66114A6529A7C07F00BA0915 /* UIimageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6429A7C07F00BA0915 /* UIimageViewExtension.swift */; };
 		66114A6B29A7D11C00BA0915 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */; };
 		66114A6D29A7DB9500BA0915 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6C29A7DB9500BA0915 /* UIViewControllerExtension.swift */; };
+		66114A7029A7E23300BA0915 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6F29A7E23300BA0915 /* OptionViewController.swift */; };
 		66114A7429A8F81400BA0915 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7329A8F81400BA0915 /* UIColorExtension.swift */; };
+		66114A7929A8FA3400BA0915 /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7829A8FA3400BA0915 /* OptionViewModel.swift */; };
+		66114A7B29A8FD3800BA0915 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,11 +98,15 @@
 		66114A5429A79D4400BA0915 /* SearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
 		66114A5629A7A00900BA0915 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		66114A5829A7A15900BA0915 /* SearchMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainViewModel.swift; sourceTree = "<group>"; };
+		66114A5D29A7AAC900BA0915 /* SearchMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainCoordinator.swift; sourceTree = "<group>"; };
+		66114A5F29A7B01B00BA0915 /* SearchListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCoordinator.swift; sourceTree = "<group>"; };
 		66114A6229A7BFD100BA0915 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		66114A6429A7C07F00BA0915 /* UIimageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageViewExtension.swift; sourceTree = "<group>"; };
 		66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		66114A6F29A7E23300BA0915 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		66114A7329A8F81400BA0915 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		66114A7829A8FA3400BA0915 /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
+		66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				66114A4529A7640A00BA0915 /* Cell */,
-				66114A4329A763B000BA0915 /* SearchListViewController.swift */,
+				66114A7E29A8FFD400BA0915 /* SearchListViewController.swift */,
+				66114A6E29A7E20600BA0915 /* Option */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -351,6 +359,23 @@
 				66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		66114A6E29A7E20600BA0915 /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				66114A7529A8F93F00BA0915 /* Cell */,
+				66114A6F29A7E23300BA0915 /* OptionViewController.swift */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
+		66114A7529A8F93F00BA0915 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66114A6529A7C07F00BA0915 /* UIimageViewExtension.swift in Sources */,
+				66114A7B29A8FD3800BA0915 /* OptionTableViewCell.swift in Sources */,
 				66114A4A29A795F500BA0915 /* BaseTableViewCell.swift in Sources */,
 				66114A2029A74F7D00BA0915 /* SearchAPI.swift in Sources */,
 				66114A2729A750DF00BA0915 /* OrderType.swift in Sources */,
@@ -520,6 +546,7 @@
 				66114A3D29A759B100BA0915 /* SearchService.swift in Sources */,
 				66114A4D29A7971100BA0915 /* UIViewExtensions.swift in Sources */,
 				66114A2E29A7538E00BA0915 /* SessionManager.swift in Sources */,
+				66114A7029A7E23300BA0915 /* OptionViewController.swift in Sources */,
 				661149E329A745F600BA0915 /* SceneDelegate.swift in Sources */,
 				66114A6029A7B01B00BA0915 /* SearchListCoordinator.swift in Sources */,
 			);
