@@ -39,6 +39,8 @@
 		66114A5529A79D4400BA0915 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5429A79D4400BA0915 /* SearchViewModel.swift */; };
 		66114A5729A7A00900BA0915 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5629A7A00900BA0915 /* BaseViewController.swift */; };
 		66114A5929A7A15900BA0915 /* SearchMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5829A7A15900BA0915 /* SearchMainViewModel.swift */; };
+		66114A5E29A7AAC900BA0915 /* SearchMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5D29A7AAC900BA0915 /* SearchMainCoordinator.swift */; };
+		66114A6029A7B01B00BA0915 /* SearchListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5F29A7B01B00BA0915 /* SearchListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				66114A1129A74BA300BA0915 /* AppSetting */,
+				66114A5A29A7A85400BA0915 /* Coordinator */,
 				66114A1229A74DF400BA0915 /* Network */,
 				66114A3B29A7599E00BA0915 /* Service */,
 				66114A3E29A75D5300BA0915 /* ViewControllers */,
@@ -182,7 +185,6 @@
 			children = (
 				661149E029A745F600BA0915 /* AppDelegate.swift */,
 				661149E229A745F600BA0915 /* SceneDelegate.swift */,
-				66114A3F29A7618C00BA0915 /* AppCoordinator.swift */,
 			);
 			path = AppSetting;
 			sourceTree = "<group>";
@@ -301,6 +303,16 @@
 				66114A5829A7A15900BA0915 /* SearchMainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66114A5A29A7A85400BA0915 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				66114A3F29A7618C00BA0915 /* AppCoordinator.swift */,
+				66114A5D29A7AAC900BA0915 /* SearchMainCoordinator.swift */,
+				66114A5F29A7B01B00BA0915 /* SearchListCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
