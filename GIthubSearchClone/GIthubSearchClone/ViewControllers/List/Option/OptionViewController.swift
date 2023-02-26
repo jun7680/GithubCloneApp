@@ -23,7 +23,7 @@ class OptionViewController: BaseViewController {
     
     private let titleView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black9
+        view.backgroundColor = .tableViewBackground
         return view
     }()
     
@@ -47,7 +47,7 @@ class OptionViewController: BaseViewController {
     
     private let optionTableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .backgroundColor
+        tableView.backgroundColor = .tableViewBackground
         tableView.register(
             OptionTableViewCell.self,
             forCellReuseIdentifier: OptionTableViewCell.identifier
@@ -70,7 +70,7 @@ class OptionViewController: BaseViewController {
     override func setup() {
         super.setup()
         
-        view.backgroundColor = .black9
+        view.backgroundColor = .tableViewBackground
         titleLabel.text = type.title
         fetchOptionList(type: type)
     }
@@ -131,7 +131,6 @@ class OptionViewController: BaseViewController {
                 cellIdentifier: OptionTableViewCell.identifier,
                 cellType: OptionTableViewCell.self
             )) { _, option, cell in
-                print(option)
                 cell.configure(option: option)
             }.disposed(by: disposeBag)
     }

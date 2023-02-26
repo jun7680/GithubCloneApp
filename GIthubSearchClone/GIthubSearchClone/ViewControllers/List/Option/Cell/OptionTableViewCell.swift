@@ -21,7 +21,7 @@ class OptionTableViewCell: BaseTableViewCell {
     
     override func setup() {
         super.setup()
-        backgroundColor = .black9
+        backgroundColor = .tableViewBackground
         selectionStyle = .none
     }
     
