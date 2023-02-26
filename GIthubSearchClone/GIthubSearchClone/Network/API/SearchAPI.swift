@@ -35,7 +35,6 @@ extension SearchAPI: APIType {
                 Localize.APIKey.perPage: params.limit,
                 Localize.APIKey.page: params.page
             ]
-            
         }
     }
 }

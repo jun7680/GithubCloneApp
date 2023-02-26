@@ -35,6 +35,12 @@ struct SearchDTO: Codable {
     }
 }
 
+extension SearchDTO {
+    var languageColorName: String {
+        return LanguageType(language: language).rawValue
+    }
+}
+
 struct OwnerDTO: Codable {
     /// owner name
     let login: String
@@ -46,3 +52,4 @@ struct OwnerDTO: Codable {
         case avatarURL = "avatar_url"
     }
 }
+
