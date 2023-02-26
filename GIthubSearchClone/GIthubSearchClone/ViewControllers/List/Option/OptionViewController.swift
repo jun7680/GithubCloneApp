@@ -32,14 +32,13 @@ class OptionViewController: BaseViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Sort"
         label.font = .systemFont(ofSize: 18, weight: .bold)
         return label
     }()
     
     private let cancelButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Cancel", for: .normal)
+        button.setTitle(Localize.View.cancel, for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         
         return button
@@ -124,15 +123,7 @@ class OptionViewController: BaseViewController {
     
     override func bind() {
         super.bind()
-        
-        viewModel.outputs.optionListObservable
-            .observe(on: MainScheduler.asyncInstance)
-            .bind(to: optionTableView.rx.items(
-                cellIdentifier: OptionTableViewCell.identifier,
-                cellType: OptionTableViewCell.self
-            )) { _, option, cell in
-                cell.configure(option: option)
-            }.disposed(by: disposeBag)
+        bindOptionListEvents()
     }
     
     override func subscribeUI() {
@@ -155,6 +146,17 @@ class OptionViewController: BaseViewController {
 
 // MARK: - private function
 extension OptionViewController {
+    private func bindOptionListEvents() {
+        viewModel.outputs.optionListObservable
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: optionTableView.rx.items(
+                cellIdentifier: OptionTableViewCell.identifier,
+                cellType: OptionTableViewCell.self
+            )) { _, option, cell in
+                cell.configure(option: option)
+            }.disposed(by: disposeBag)
+    }
+    
     private func fetchOptionList(type: ActionType) {
         viewModel.inputs.fetchList(type: type)
     }

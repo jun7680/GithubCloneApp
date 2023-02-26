@@ -42,7 +42,7 @@
 		66114A6029A7B01B00BA0915 /* SearchListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A5F29A7B01B00BA0915 /* SearchListCoordinator.swift */; };
 		66114A6329A7BFD100BA0915 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6229A7BFD100BA0915 /* ImageCache.swift */; };
 		66114A6529A7C07F00BA0915 /* UIimageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6429A7C07F00BA0915 /* UIimageViewExtension.swift */; };
-		66114A6B29A7D11C00BA0915 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */; };
+		66114A6B29A7D11C00BA0915 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6A29A7D11C00BA0915 /* ActivityIndicator.swift */; };
 		66114A6D29A7DB9500BA0915 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6C29A7DB9500BA0915 /* UIViewControllerExtension.swift */; };
 		66114A7029A7E23300BA0915 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A6F29A7E23300BA0915 /* OptionViewController.swift */; };
 		66114A7429A8F81400BA0915 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7329A8F81400BA0915 /* UIColorExtension.swift */; };
@@ -50,6 +50,10 @@
 		66114A7B29A8FD3800BA0915 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */; };
 		66114A7F29A8FFD400BA0915 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66114A7E29A8FFD400BA0915 /* SearchListViewController.swift */; };
 		66C4382C29AB729900B1D417 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C4382B29AB729900B1D417 /* LanguageType.swift */; };
+		66C4383C29AB907D00B1D417 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 66C4383B29AB907D00B1D417 /* Realm */; };
+		66C4383E29AB907D00B1D417 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66C4383D29AB907D00B1D417 /* RealmSwift */; };
+		66C4384029AB907D00B1D417 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 66C4383F29AB907D00B1D417 /* RxRealm */; };
+		66C4384229AB90E200B1D417 /* SearchListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C4384129AB90E200B1D417 /* SearchListViewModelTest.swift */; };
 		66CE4B4529A91A6900A61D92 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 66CE4B4429A91A6900A61D92 /* Realm */; };
 		66CE4B4729A91A6900A61D92 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66CE4B4629A91A6900A61D92 /* RealmSwift */; };
 		66CE4B4A29A91A8E00A61D92 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 66CE4B4929A91A8E00A61D92 /* RxRealm */; };
@@ -113,7 +117,7 @@
 		66114A5F29A7B01B00BA0915 /* SearchListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCoordinator.swift; sourceTree = "<group>"; };
 		66114A6229A7BFD100BA0915 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		66114A6429A7C07F00BA0915 /* UIimageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageViewExtension.swift; sourceTree = "<group>"; };
-		66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		66114A6A29A7D11C00BA0915 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		66114A6C29A7DB9500BA0915 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		66114A6F29A7E23300BA0915 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		66114A7329A8F81400BA0915 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		66114A7E29A8FFD400BA0915 /* SearchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		66C4382B29AB729900B1D417 /* LanguageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageType.swift; sourceTree = "<group>"; };
+		66C4384129AB90E200B1D417 /* SearchListViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewModelTest.swift; sourceTree = "<group>"; };
 		66CE4B4C29A91AB200A61D92 /* RecentWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWordData.swift; sourceTree = "<group>"; };
 		66CE4B5029A91AE500A61D92 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		66CE4B5229A91BD800A61D92 /* RecentWordDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWordDAO.swift; sourceTree = "<group>"; };
@@ -149,6 +154,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C4384029AB907D00B1D417 /* RxRealm in Frameworks */,
+				66C4383E29AB907D00B1D417 /* RealmSwift in Frameworks */,
+				66C4383C29AB907D00B1D417 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +177,7 @@
 				661149F629A745F800BA0915 /* GIthubSearchCloneTests */,
 				66114A0029A745F800BA0915 /* GIthubSearchCloneUITests */,
 				661149DE29A745F600BA0915 /* Products */,
+				66C4383A29AB907D00B1D417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +216,7 @@
 		661149F629A745F800BA0915 /* GIthubSearchCloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				66C4384129AB90E200B1D417 /* SearchListViewModelTest.swift */,
 				661149F729A745F800BA0915 /* GIthubSearchCloneTests.swift */,
 			);
 			path = GIthubSearchCloneTests;
@@ -383,7 +393,7 @@
 		66114A6929A7D10C00BA0915 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				66114A6A29A7D11C00BA0915 /* LoadingIndicator.swift */,
+				66114A6A29A7D11C00BA0915 /* ActivityIndicator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +413,13 @@
 				66114A7A29A8FD3800BA0915 /* OptionTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		66C4383A29AB907D00B1D417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		66CE4B4B29A91A9A00A61D92 /* DB */ = {
@@ -484,6 +501,11 @@
 				661149F529A745F800BA0915 /* PBXTargetDependency */,
 			);
 			name = GIthubSearchCloneTests;
+			packageProductDependencies = (
+				66C4383B29AB907D00B1D417 /* Realm */,
+				66C4383D29AB907D00B1D417 /* RealmSwift */,
+				66C4383F29AB907D00B1D417 /* RxRealm */,
+			);
 			productName = GIthubSearchCloneTests;
 			productReference = 661149F329A745F800BA0915 /* GIthubSearchCloneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -614,7 +636,7 @@
 				66114A3A29A7575800BA0915 /* SearchResponse.swift in Sources */,
 				66114A5929A7A15900BA0915 /* SearchMainViewModel.swift in Sources */,
 				661149E529A745F600BA0915 /* SearchMainViewController.swift in Sources */,
-				66114A6B29A7D11C00BA0915 /* LoadingIndicator.swift in Sources */,
+				66114A6B29A7D11C00BA0915 /* ActivityIndicator.swift in Sources */,
 				66CE4B5829A928B500A61D92 /* RecentHeaderView.swift in Sources */,
 				661149E129A745F600BA0915 /* AppDelegate.swift in Sources */,
 				66114A6329A7BFD100BA0915 /* ImageCache.swift in Sources */,
@@ -632,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C4384229AB90E200B1D417 /* SearchListViewModelTest.swift in Sources */,
 				661149F829A745F800BA0915 /* GIthubSearchCloneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1029,6 +1052,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 66114A2F29A754AB00BA0915 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		66C4383B29AB907D00B1D417 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66CE4B4329A91A6900A61D92 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		66C4383D29AB907D00B1D417 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66CE4B4329A91A6900A61D92 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		66C4383F29AB907D00B1D417 /* RxRealm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66CE4B4829A91A8E00A61D92 /* XCRemoteSwiftPackageReference "RxRealm" */;
+			productName = RxRealm;
 		};
 		66CE4B4429A91A6900A61D92 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
