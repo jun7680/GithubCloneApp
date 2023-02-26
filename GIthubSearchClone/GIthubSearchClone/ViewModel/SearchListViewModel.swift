@@ -62,7 +62,6 @@ class SearchListViewModel: SearchListViewModelInput,
         SearchService.fetch(params: params)
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .subscribe(with: self, onSuccess: { owner, result in
-                print(result.items.count, owner.params.limit)
                 if result.items.count < owner.params.limit {
                     owner.isMoreItems = false
                 } else {

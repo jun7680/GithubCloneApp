@@ -56,6 +56,13 @@ class SearchListTableViewCell: BaseTableViewCell {
         return label
     }()
     
+    private let circleView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 4
+        view.backgroundColor = .white
+        return view
+    }()
+    
     private let languageLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
@@ -86,6 +93,7 @@ class SearchListTableViewCell: BaseTableViewCell {
             descriptionLabel,
             starImageView,
             starCountLabel,
+            circleView,
             languageLabel
         ]
         
@@ -130,8 +138,14 @@ class SearchListTableViewCell: BaseTableViewCell {
             make.centerY.equalTo(starImageView)
         }
         
+        circleView.snp.makeConstraints { make in
+            make.leading.equalTo(starCountLabel.snp.trailing).offset(8)
+            make.size.equalTo(8)
+            make.centerY.equalTo(starImageView)
+        }
+        
         languageLabel.snp.makeConstraints { make in
-            make.leading.equalTo(starCountLabel.snp.trailing).offset(4)
+            make.leading.equalTo(circleView.snp.trailing).offset(4)
             make.centerY.equalTo(starImageView)
         }
     }
@@ -143,5 +157,6 @@ class SearchListTableViewCell: BaseTableViewCell {
         starCountLabel.text = model.starCount.toDecimal
         languageLabel.text = model.language
         avatarImageView.setImage(from: model.owner.avatarURL)
+        circleView.backgroundColor = UIColor(named: model.languageColorName)
     }
 }
