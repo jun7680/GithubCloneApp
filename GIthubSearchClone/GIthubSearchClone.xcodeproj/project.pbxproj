@@ -55,6 +55,7 @@
 		66CE4B4D29A91AB200A61D92 /* RecentWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B4C29A91AB200A61D92 /* RecentWordData.swift */; };
 		66CE4B5129A91AE500A61D92 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5029A91AE500A61D92 /* RealmManager.swift */; };
 		66CE4B5329A91BD800A61D92 /* RecentWordDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5229A91BD800A61D92 /* RecentWordDAO.swift */; };
+		66CE4B5A29A929A100A61D92 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5929A929A100A61D92 /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		66CE4B4C29A91AB200A61D92 /* RecentWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWordData.swift; sourceTree = "<group>"; };
 		66CE4B5029A91AE500A61D92 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		66CE4B5229A91BD800A61D92 /* RecentWordDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWordDAO.swift; sourceTree = "<group>"; };
+		66CE4B5929A929A100A61D92 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 			children = (
 				66114A4929A795F500BA0915 /* BaseTableViewCell.swift */,
 				66114A5629A7A00900BA0915 /* BaseViewController.swift */,
+				66CE4B5929A929A100A61D92 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				66114A5729A7A00900BA0915 /* BaseViewController.swift in Sources */,
 				66114A7929A8FA3400BA0915 /* OptionViewModel.swift in Sources */,
 				66114A4729A7641F00BA0915 /* SearchListTableViewCell.swift in Sources */,
+				66CE4B5A29A929A100A61D92 /* BaseView.swift in Sources */,
 				66114A2529A750DA00BA0915 /* SortType.swift in Sources */,
 				66114A2929A7518200BA0915 /* SearchParameters.swift in Sources */,
 				66114A7F29A8FFD400BA0915 /* SearchListViewController.swift in Sources */,
