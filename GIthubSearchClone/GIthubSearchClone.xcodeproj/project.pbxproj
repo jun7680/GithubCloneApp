@@ -55,6 +55,8 @@
 		66CE4B4D29A91AB200A61D92 /* RecentWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B4C29A91AB200A61D92 /* RecentWordData.swift */; };
 		66CE4B5129A91AE500A61D92 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5029A91AE500A61D92 /* RealmManager.swift */; };
 		66CE4B5329A91BD800A61D92 /* RecentWordDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5229A91BD800A61D92 /* RecentWordDAO.swift */; };
+		66CE4B5629A9225400A61D92 /* RecentWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5529A9225400A61D92 /* RecentWordTableViewCell.swift */; };
+		66CE4B5829A928B500A61D92 /* RecentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5729A928B500A61D92 /* RecentHeaderView.swift */; };
 		66CE4B5A29A929A100A61D92 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4B5929A929A100A61D92 /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,8 @@
 		66CE4B4C29A91AB200A61D92 /* RecentWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWordData.swift; sourceTree = "<group>"; };
 		66CE4B5029A91AE500A61D92 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		66CE4B5229A91BD800A61D92 /* RecentWordDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWordDAO.swift; sourceTree = "<group>"; };
+		66CE4B5529A9225400A61D92 /* RecentWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWordTableViewCell.swift; sourceTree = "<group>"; };
+		66CE4B5729A928B500A61D92 /* RecentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentHeaderView.swift; sourceTree = "<group>"; };
 		66CE4B5929A929A100A61D92 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,6 +295,7 @@
 		66114A4129A7638700BA0915 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				66CE4B5429A9223D00A61D92 /* Cell */,
 				661149E429A745F600BA0915 /* SearchMainViewController.swift */,
 			);
 			path = Main;
@@ -421,6 +426,15 @@
 				66CE4B5229A91BD800A61D92 /* RecentWordDAO.swift */,
 			);
 			path = DAO;
+			sourceTree = "<group>";
+		};
+		66CE4B5429A9223D00A61D92 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				66CE4B5529A9225400A61D92 /* RecentWordTableViewCell.swift */,
+				66CE4B5729A928B500A61D92 /* RecentHeaderView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,6 +602,7 @@
 				66114A2929A7518200BA0915 /* SearchParameters.swift in Sources */,
 				66114A7F29A8FFD400BA0915 /* SearchListViewController.swift in Sources */,
 				66114A5E29A7AAC900BA0915 /* SearchMainCoordinator.swift in Sources */,
+				66CE4B5629A9225400A61D92 /* RecentWordTableViewCell.swift in Sources */,
 				66114A6D29A7DB9500BA0915 /* UIViewControllerExtension.swift in Sources */,
 				66114A1E29A74F5C00BA0915 /* APIType.swift in Sources */,
 				66114A2C29A7527E00BA0915 /* Localization.swift in Sources */,
@@ -596,6 +611,7 @@
 				66114A5929A7A15900BA0915 /* SearchMainViewModel.swift in Sources */,
 				661149E529A745F600BA0915 /* SearchMainViewController.swift in Sources */,
 				66114A6B29A7D11C00BA0915 /* LoadingIndicator.swift in Sources */,
+				66CE4B5829A928B500A61D92 /* RecentHeaderView.swift in Sources */,
 				661149E129A745F600BA0915 /* AppDelegate.swift in Sources */,
 				66114A6329A7BFD100BA0915 /* ImageCache.swift in Sources */,
 				66114A7429A8F81400BA0915 /* UIColorExtension.swift in Sources */,
