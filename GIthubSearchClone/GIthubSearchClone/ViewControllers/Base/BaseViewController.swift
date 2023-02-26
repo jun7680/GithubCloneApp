@@ -8,6 +8,17 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    private let alert: UIAlertController = {
+        let alert = UIAlertController(
+            title: nil,
+            message: Localize.View.errorMSG,
+            preferredStyle: .alert
+        )
+        
+        let defaultAction = UIAlertAction(title: Localize.View.confirm, style: .default)
+        alert.addAction(defaultAction)
+        return alert
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,4 +40,8 @@ class BaseViewController: UIViewController {
     func bind() {}
     func subscribeUI() {}
     func initConstraints() {}
+    
+    func errorPresent() {
+        present(alert, animated: true)
+    }
 }

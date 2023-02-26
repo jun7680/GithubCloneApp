@@ -23,7 +23,7 @@ class SearchMainViewController: BaseViewController {
     
     private let searchController: UISearchController = {
         let controller = UISearchController()
-        controller.searchBar.placeholder = "Search Repository"
+        controller.searchBar.placeholder = Localize.View.searchBarPlaceholder
         controller.searchBar.autocapitalizationType = .none
         controller.searchBar.autocorrectionType = .no
         

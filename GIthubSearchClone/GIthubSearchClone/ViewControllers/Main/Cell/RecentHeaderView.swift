@@ -19,14 +19,14 @@ class RecentHeaderView: BaseView {
         let label = UILabel()
         label.textColor = .white
         label.font = .systemFont(ofSize: 18, weight: .bold)
-        label.text = "Recent searches"
+        label.text = Localize.View.recentSearches
         
         return label
     }()
     
     private let clearButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Clear", for: .normal)
+        button.setTitle(Localize.View.clear, for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         
         return button
