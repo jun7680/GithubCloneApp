@@ -45,7 +45,7 @@ class SearchListViewController: BaseViewController {
     
     override func setup() {
         super.setup()
-        LoadingIndicator.showLoading()
+        ActivityIndicator.showLoading()
         navigationItem.rightBarButtonItem = optionButton
     }
     
@@ -67,23 +67,10 @@ class SearchListViewController: BaseViewController {
     override func bind() {
         super.bind()
         
-        viewModel.outputs.searchListObservable
-            .observe(on: MainScheduler.asyncInstance)
-            .bind(to: searchListTableView.rx.items(
-                cellIdentifier: SearchListTableViewCell.identifer,
-                cellType: SearchListTableViewCell.self
-            )) { index, item, cell in
-                cell.configure(model: item)
-            }.disposed(by: disposeBag)
+        bindSearchListEvents()
+        bindLoadingEvents()
+        bindErrorEvents()
         
-        viewModel.outputs.loadingFinishObservable
-            .observe(on: MainScheduler.asyncInstance)
-            .bind(with: self) { owner, status in
-                switch status {
-                case true: LoadingIndicator.hideLoading()
-                case false: LoadingIndicator.showLoading()
-                }
-            }.disposed(by: disposeBag)
     }
     
     override func subscribeUI() {
@@ -103,12 +90,47 @@ class SearchListViewController: BaseViewController {
 
 // MARK: - private function
 extension SearchListViewController {
+    /// willDisplayCell events
     private func willDisplayCellEvents() {
         searchListTableView.rx.willDisplayCell
             .subscribe(with: self) { owner, cell in
                 owner.viewModel.inputs.fetchMore(
                     row: cell.indexPath.row
                 )
+            }.disposed(by: disposeBag)
+    }
+    
+    /// 검색결과 바인딩
+    private func bindSearchListEvents() {
+        viewModel.outputs.searchListObservable
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: searchListTableView.rx.items(
+                cellIdentifier: SearchListTableViewCell.identifer,
+                cellType: SearchListTableViewCell.self
+            )) { index, item, cell in
+                cell.configure(model: item)
+            }.disposed(by: disposeBag)
+        
+    }
+    
+    /// 로딩 이벤트 바인딩
+    private func bindLoadingEvents() {
+        viewModel.outputs.loadingFinishObservable
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(with: self) { owner, status in
+                switch status {
+                case true: ActivityIndicator.hideLoading()
+                case false: ActivityIndicator.showLoading()
+                }
+            }.disposed(by: disposeBag)
+    }
+    
+    /// 에러 이벤트 바인딩
+    private func bindErrorEvents() {
+        viewModel.outputs.errorObservable
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(with: self) { owner, _ in
+                owner.errorPresent()
             }.disposed(by: disposeBag)
     }
 }

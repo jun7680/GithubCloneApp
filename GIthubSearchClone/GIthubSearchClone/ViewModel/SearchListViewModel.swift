@@ -16,11 +16,13 @@ protocol SearchListViewModelInput {
     
     var searchListRelay: PublishRelay<[SearchDTO]> { get }
     var loadingFinishRelay: PublishRelay<Bool> { get }
+    var errorRelay: PublishRelay<Void> { get }
 }
 
 protocol SearchListViewModelOutput {
     var searchListObservable: Observable<[SearchDTO]> { get }
     var loadingFinishObservable: Observable<Bool> { get }
+    var errorObservable: Observable<Void> { get }
 }
 
 class SearchListViewModel: SearchListViewModelInput,
@@ -41,6 +43,11 @@ class SearchListViewModel: SearchListViewModelInput,
     var loadingFinishRelay = PublishRelay<Bool>()
     var loadingFinishObservable: Observable<Bool> {
         return loadingFinishRelay.asObservable()
+    }
+    
+    var errorRelay = PublishRelay<Void>()
+    var errorObservable: Observable<Void> {
+        return errorRelay.asObservable()
     }
     
     // MARK: - pagination property
@@ -73,7 +80,9 @@ class SearchListViewModel: SearchListViewModelInput,
                 owner.isRequesting = false
                 owner.loadingFinishRelay.accept(true)
             }, onFailure: { owner, error in
+                owner.initRequestParameter()
                 owner.loadingFinishRelay.accept(true)
+                owner.errorRelay.accept(())
             }).disposed(by: disposeBag)
     }
     
@@ -93,10 +102,14 @@ class SearchListViewModel: SearchListViewModelInput,
         fetch()
     }
     
-    func refreshItems() {
+    private func refreshItems() {
         searchListItems.removeAll()
+        initRequestParameter()
+        params.page = 1
+    }
+    
+    private func initRequestParameter() {
         isRequesting = false
         isMoreItems = true
-        params.page = 1
     }
 }
