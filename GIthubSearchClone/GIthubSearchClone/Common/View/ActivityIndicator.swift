@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoadingIndicator {
+class ActivityIndicator {
     static func showLoading() {
          DispatchQueue.main.async {
              // 최상단에 있는 window 객체 획득
