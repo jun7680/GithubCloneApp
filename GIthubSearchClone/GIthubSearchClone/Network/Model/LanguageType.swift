@@ -9,6 +9,7 @@ import Foundation
 
 enum LanguageType: String {
     case swift
+    case objectC
     case java
     case javaScript
     case c
@@ -19,6 +20,7 @@ enum LanguageType: String {
     init(language: String?) {
         switch language {
         case "Swift": self = .swift
+        case "Objective-C": self = .objectC
         case "Java": self = .java
         case "javaScript": self = .javaScript
         case "C": self = .c

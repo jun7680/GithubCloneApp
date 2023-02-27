@@ -118,6 +118,7 @@ class SearchListTableViewCell: BaseTableViewCell {
             make.top.equalTo(avatarImageView.snp.bottom).offset(6)
             make.leading.equalTo(avatarImageView)
             make.trailing.equalToSuperview().inset(8)
+            make.height.equalTo(15)
         }
         
         descriptionLabel.snp.makeConstraints { make in
